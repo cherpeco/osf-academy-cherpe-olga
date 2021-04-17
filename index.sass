@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+@mixin header
+    position: absolute
+    top: 30px
+    width: 250px
+    height: 15px
+    color: #ffffff
+    font-family: "Lato - Extra Bold"
+    font-size: 20px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: left
+    text-transform: uppercase
+
+$fontcolor: #b5b7b9
+$fontfamily: Lato
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Lato', sans-serif
+
+body
+    background-color: #a4d5e9   
+
+  
+
+.wrapper
+    position: static
+    width: 100vw
+    padding: 0px 55px
+    height: 70px
+    line-height: 40px
+    margin: auto
+    display: inline-block
+    background-color: white
+    border-bottom: 3px solid $fontcolor
+    
+
+.logo
+   padding-left: 45%
+
+  
+
+.wrapper .btn
+    font-size: 20px
+    cursor: pointer
+    display: block
+
+    &.close-btn
+      position: absolute
+      left: 30px
+      top: 10px
+      color: #f2f2f2 
+
+    &.menu-btn
+      position: absolute
+      left: 30px
+      top: 10px
+      color: #242526
+
+
+.nav-links
+    position: fixed
+    height: 85%
+    width: 350px
+    top: 0px
+    left: -100%
+    background: #242526
+    display: block
+    overflow-y: auto
+    padding: 50px 0px 0px 30px
+    list-style: none 
+    a 
+       text-decoration: none
+       color: white
+    li
+        a 
+          text-decoration: none
+          color: white
+
+.mobile-item, .mobile-item-md
+    display: block
+    color: #f2f2f2
+    font-weight: 500
+    padding-left: 10px
+    font-size: medium
+    text-transform: uppercase
+    label
+         top: 150px 
+         left: 100px
+         color: red
+
+
+.show-lg, .show-md, input
+    display: none
+
+
+.show-sm
+    display: inline
+
+.layer
+    display: none
+
+/* custom scroll bar
+\::-webkit-scrollbar
+    width: 10px
+\::-webkit-scrollbar-track
+    background: #242526
+\::-webkit-scrollbar-thumb
+    background: #3A3B3C
+
+#menu-btn:checked ~
+  .nav-links
+      left: 0%
+
+  .btn.menu-btn
+      display: none
+
+
+#close-btn:checked ~ .btn.menu-btn
+     display: block
+
+.fa-caret-down
+    color: #f2f2f2
+    float: right
+    padding-right: 5px
+           
+.mega-links-product, .mega-links-sale
+        display: none
+        li
+            list-style: none
+            padding-left: 30px
+            a
+                top: 5px
+
+#showMega:checked ~ .mega-box
+     display: block
+     max-height: 20%
+    
+    
+#showProduct:checked ~ .row > .mega-links-product, #showSale:checked ~ .row > .mega-links-sale
+    display: block
+
+
+
+.mega-box
+    position: static
+    top: 45px
+    height: auto
+    opacity: 1
+    display: none
+    padding: 0px
+    width: 200px
+    .content
+       box-shadow: none
+       padding: 0px
+       width: 100%
+       display: block
+       label
+           color: white
+           padding-left: 15px //product and sale 
+           .fa-caret-down
+               padding-top: 15px //caret down for product and sale
+       .row
+           height: auto
+           width: auto
+
+    
+.layer-2
+ top: 0px
+ width: 63px
+ height: 65px
+ left: 55px
+ bottom: 15px
+.osf
+    position: absolute
+    top: 10px
+    left: 130px
+    width: 73px
+    height: 25px
+    color: #011847
+    font-family: "Lato - Extra Bold"
+    font-size: 32px
+    font-weight: 600
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: left
+    text-transform: uppercase
+  
+.academy
+    position: absolute
+    top: 38px
+    left: 130px
+    width: 74px
+    height: 17px
+    color: #84bc22
+    font-family: Lato
+    font-size: 18px
+    font-weight: 400
+    font-style: normal
+    letter-spacing: normal
+    line-height: normal
+    text-align: left
+
+//<---------------Media Queris------------------>
+
+@media screen and ( min-width: 830px)
+    body
+       background-color: azure
+   
+    .show-md
+        display: inline
+    
+    .mobile-item, label, .show-sm, input, .btn
+        display: none
+        visibility: hidden
+   
+    /* Logo = osf image and text
+    .layer
+        display: block
+    .layer-2
+       position: fixed
+       top: 0px
+       left: 55px
+       bottom: 15px 
+    .logo
+        padding-left: 0%
+
+    .mega-links 
+      display: block
+                     
+
+
+        /* custom scroll bar
+    \::-webkit-scrollbar
+      width: 0px
+    \::-webkit-scrollbar-track
+      background: #242526
+    \::-webkit-scrollbar-thumb
+      background: #3A3B3C   
+    
+    .fa-caret-down
+      color: black
+      float: none
+      padding-right: 1px
+    nav
+       position: fixed
+       z-index: 99
+       width: 100vw
+
+       .wrapper
+            position: fixed
+            width: 100vw
+            padding: 0px 0px 0px 55px
+            height: 70px
+            line-height: 40px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            background-color: white
+            border-bottom: 3px solid $fontcolor
+            .nav-links
+              position: static
+              height: 100%
+              width: 80%
+              background-color: white
+              max-width: 1000px
+              top: 0px
+              display: inline-flex
+              padding: 10px 0px 0px 10px
+              
+
+    .mega-box
+        position: absolute
+        left: 0px
+        width: 100%
+        height: 350px
+        padding: 0px
+        top: 75px
+        opacity: 0
+        visibility: hidden   
+        .content
+           background: #242526
+           padding: 80px 15px
+           display: flex
+           justify-content: flex-start 
+           width: 100vw
+           .row
+               width: calc(25% - 10px)
+               line-height: 25px
+               
+
+
+       
+    .nav-links
+        top: 0px
+        display: inline-flex
+        li
+            list-style: none
+            a
+               color: #45413e
+               font-family: Lato
+               font-size: 18px
+               font-weight: 400
+               font-style: normal
+               letter-spacing: normal
+               line-height: normal
+               text-align: left
+               text-transform: uppercase
+               text-decoration: none
+               padding: 10px 15px 20px
+               border-radius: 5px
+               &:hover
+                    background: #3A3B3C
+                    color: #f2f2f2
+                    border-bottom: 5px solid #84bc22        
+        li:hover
+            .mega-box
+                top: 72px
+                opacity: 1
+                display: block
+                visibility: visible
+    
+    
+    .content .row
+            
+        header.sale           
+           @include header
+           padding-left: 30px
+
+           
+    
+        header.product
+           @include header
+           left: 50px 
+           
+        .mega-links
+            a
+                 color: #ffffff
+                 font-size: 20px
+                 font-family: $fontfamily
+                 font-weight: 200
+                 line-height: 30px
+                 padding: 4px 4px 
+                 border-bottom-style: none
+                 text-transform: none
+
+                 &:hover
+                   color: white
+                   background-color: #242526
+                   opacity: 0.4
+                   border-bottom-style: none
+
+
+    
+    a
+       padding: 0
+       color: #ffff
+       font-size: 20px
+       font-family: $fontfamily
+       font-weight: 200
+       line-height: 25px
+       border-bottom-style: none
+       text-transform: none
+       &:hover
+           color: white
+           border-bottom-style: none
+    
+
+    
+@media screen and ( min-width: 1280px )
+    body
+        background-color: #f1c89a  
+    
+    .logo 
+        padding-left: 25%
+    .show-md, .show-lg
+        display: inline
+        visibility: visible
+
+    .nav-links
+        .drop-menu
+            position: absolute
+            background: white
+            width: 65px
+            line-height: 20px
+            top: 65px
+            opacity: 1
+            visibility: hidden
+            color: black
+            li:hover
+                .drop-menu
+                   top: 60px
+                   visibility: visible
+                   display: block
+                   opacity: 0.8
+
+    .drop-menu li a
+        width: 100%
+        display: block
+        padding: 0 0 0 15px
+        font-weight: 400
+        border-radius: 0px
+        color: black
+
+    .content .row
+      img
+         position: relative
+         top: 10px
+         right: 15px
+         width: 271px
+         height: 276px
+
+    .nav-links >
+        li.show-lg a:hover
+            border-bottom-style: none
+            color: black
+            background-color: white
+            opacity: 0.2
+        .drop-menu
+            position: absolute
+            background: white
+            width: 60px
+            line-height: 20px
+            top: 65px
+            opacity: 1
+            visibility: hidden
+            color: black
+            box-shadow: 0 6px 10px rgba(58, 8, 8, 0.15)
+
+        li:hover
+           .mega-box
+             top: 72px
+             opacity: 1
+             visibility: visible
+             display: block
+       
+           .drop-menu
+             top: 60px
+             visibility: visible
+             display: block
+             opacity: 0.8
