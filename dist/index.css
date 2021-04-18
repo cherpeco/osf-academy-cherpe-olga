@@ -47,14 +47,15 @@ body {
 .nav-links {
   position: fixed;
   height: 85%;
-  width: 350px;
+  width: 320px;
   top: 0px;
-  left: -100%;
+  left: -120%;
   background: #242526;
   display: block;
   overflow-y: auto;
   padding: 50px 0px 0px 30px;
   list-style: none;
+  z-index: 99;
 }
 .nav-links a {
   text-decoration: none;
@@ -118,7 +119,7 @@ body {
 .fa-caret-down {
   color: #f2f2f2;
   float: right;
-  padding-right: 5px;
+  padding-right: 20px;
 }
 
 .mega-links-product, .mega-links-sale {
@@ -207,6 +208,93 @@ body {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
+}
+
+.carousel-inner {
+  min-height: 500px !important;
+  z-index: 2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-control-prev, .carousel-control-next, .carousel-indicators {
+  z-index: 3;
+}
+
+.container {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 5px;
+  opacity: 1;
+}
+
+.carousel-indicators li {
+  border-radius: 50%;
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #b89e9e;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.slide1 {
+  position: absolute;
+  top: 10px;
+}
+.slide1 p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+.slide1 button {
+  visibility: visible;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 25px 5px 25px;
+  border-radius: 25px;
+  color: white;
+  border-color: white;
+}
+
+.slide2 {
+  position: absolute;
+  top: 10px;
+}
+.slide2 p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+.slide2 button {
+  visibility: visible;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 25px 5px 25px;
+  border-radius: 25px;
+  color: white;
+  border-color: white;
+}
+
+.slide3 {
+  position: absolute;
+  top: 10px;
+}
+.slide3 p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+.slide3 button {
+  visibility: visible;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 25px 5px 25px;
+  border-radius: 25px;
+  color: white;
+  border-color: white;
 }
 
 @media screen and (min-width: 830px) {
@@ -408,10 +496,38 @@ body {
     color: white;
     border-bottom-style: none;
   }
+
+  .slide1 {
+    text-align: left;
+  }
+  .slide1 p {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .slide2 {
+    text-align: center;
+  }
+  .slide2 p {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .slide3 {
+    text-align: right;
+  }
+  .slide3 p {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .carousel-item {
+    left: 50px;
+  }
 }
 @media screen and (min-width: 1280px) {
   body {
-    background-color: #f1c89a;
+    background-color: white;
   }
 
   .logo {
@@ -426,10 +542,11 @@ body {
   .nav-links .drop-menu {
     position: absolute;
     background: white;
+    padding-left: 10px;
     width: 65px;
     line-height: 20px;
     top: 65px;
-    opacity: 1;
+    opacity: 0.8;
     visibility: hidden;
     color: black;
   }
@@ -441,12 +558,11 @@ body {
   }
 
   .drop-menu li a {
-    width: 100%;
     display: block;
-    padding: 0 0 0 15px;
+    padding: 0 25px 0 0px;
     font-weight: 400;
-    border-radius: 0px;
     color: black;
+    text-align: left;
   }
 
   .content .row img {
@@ -463,17 +579,6 @@ body {
     background-color: white;
     opacity: 0.2;
   }
-  .nav-links > .drop-menu {
-    position: absolute;
-    background: white;
-    width: 60px;
-    line-height: 20px;
-    top: 65px;
-    opacity: 1;
-    visibility: hidden;
-    color: black;
-    box-shadow: 0 6px 10px rgba(58, 8, 8, 0.15);
-  }
   .nav-links > li:hover .mega-box {
     top: 72px;
     opacity: 1;
@@ -485,5 +590,81 @@ body {
     visibility: visible;
     display: block;
     opacity: 0.8;
+  }
+  .nav-links > li:hover .drop-menu a {
+    text-align: left;
+  }
+
+  .container {
+    top: 100px;
+    right: 0px;
+    left: 0px;
+    margin: 0px;
+    display: inline-flex;
+  }
+
+  .box {
+    position: relative;
+    color: black;
+    left: 30px;
+    width: 26%;
+  }
+  .box .palm {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    padding-left: 30px;
+    background: #84bc22;
+    background: rgba(30, 224, 33, 0.9);
+    z-index: 1;
+    border-radius: 15px;
+  }
+  .box .palm img {
+    position: absolute;
+    height: 60%;
+    z-index: -10;
+    opacity: 0.1;
+    bottom: 0px;
+    left: 0px;
+  }
+  .box .palm .summersale {
+    position: absolute;
+    color: white;
+    text-align: center;
+    height: 100%;
+    padding: 30px;
+    top: 60px;
+    left: 60px;
+  }
+  .box .palm .summersale h1 {
+    font-size: 60px;
+    padding-bottom: 50px;
+  }
+  .box .text {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    padding-left: 30px;
+    bottom: 0px;
+    text-align: center;
+  }
+  .box .text h4 {
+    padding-top: 20px;
+    font-size: 18px;
+  }
+  .box .text button {
+    visibility: visible;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    border-radius: 25px;
+    border-color: blue;
+  }
+  .box .text .fa-facebook-f {
+    color: blue;
+  }
+  .box .text .fa-facebook-f span {
+    padding-left: 15px;
+    font-size: 15px;
   }
 }
