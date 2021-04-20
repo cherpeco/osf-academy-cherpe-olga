@@ -25,7 +25,7 @@ $fontfamily: Lato
 
 body
     background-color: #a4d5e9   
-
+   
   
 
 .wrapper
@@ -210,20 +210,26 @@ body
 
 .carousel-inner
   min-height: 500px !important
+  max-width: 97vw
   z-index: 2
   border-radius: 10px
   overflow: hidden
+  right: 2px
 
 
 .carousel-control-prev, .carousel-control-next, .carousel-indicators
      z-index: 3
 
 .container
-    position: absolute
-    top: 100px
-    left: 0px
-    right: 5px
-    opacity: 1
+    display: grid
+    //top: 100px
+    width: 100vw
+    //right: 5px
+    // opacity: 1
+    overflow: hidden
+    .row
+        padding-bottom: 60px
+
     
 
 .carousel-indicators li 
@@ -232,12 +238,8 @@ body
     height: 12px !important
     background-color: #b89e9e
 
-.carousel-item
-    position: relative
-   
 
 .slide1
-    position: absolute
     top: 10px  
 
     p
@@ -253,7 +255,6 @@ body
         color: white
         border-color: white
 .slide2
-    position: absolute
     top: 10px  
 
     p
@@ -271,7 +272,6 @@ body
         
 
 .slide3
-    position: absolute
     top: 10px  
 
     p
@@ -286,6 +286,103 @@ body
         border-radius: 25px
         color: white
         border-color: white
+
+
+.footer
+    
+    left: 0px
+    top: 95%
+    width: 100vw
+    background-color: white
+    text-align: left
+    overflow: hidden
+    padding-bottom: 30px
+    font-size: 15px
+    a
+        text-decoration: none
+        color: black
+        font-size: 15px
+    li
+        list-style: none
+        padding-top: 5px
+       
+        label
+            color: black
+            padding-left: 0px
+    .contactbox, .categories-content, .row-about
+        display: none 
+        li
+            padding-top:0px
+            
+    
+    
+    label
+        .fa-caret-down
+           color: black
+           padding-left: 5px
+           
+    .Social
+        text-align: center 
+        a
+            padding: 0px 5px
+.navbar
+         display: flex !important
+         justify-content: space-evenly !important    
+    
+          
+
+#showContact:checked ~ .contactbox
+     display: block
+#showCat:checked ~ .categories-content
+     display: block
+#showAbout:checked ~ .row-about
+     display: block
+
+.banner-osf
+    position: relative
+    background-color: #1b2929
+    width: 100vw
+    text-align: center
+    color: white
+    right: 0px
+    img
+        max-width: 100vw
+        display: block
+        z-index: -2
+        padding: 5% 0px
+    .banner-text
+        position: absolute
+        top: 20%
+        left: 10vw
+        z-index: 1
+.product-tile
+    background-color: #1b2929      
+    color: white
+    text-align: center  
+    h1
+        padding: 40px 0px 40px
+#car-item
+    position: relative
+    font-size: 14px
+    top: -13px
+    left: -11px
+    color: #84bc22
+    padding: 0px 3px 0px 3px
+    font-weight: 600
+    border: 2px solid #84bc22
+    border-radius: 50%
+    z-index: 100
+#whish-item
+    position: relative
+    font-size: 14px
+    top: -13px
+    left: -7px
+    color: #84bc22
+    padding: 0px 3px 0px 3px
+    font-weight: 600
+    border: 2px solid #84bc22
+    border-radius: 50%
+    z-index: 100
 
 //<---------------Media Queris------------------>
 
@@ -393,7 +490,7 @@ body
                text-align: left
                text-transform: uppercase
                text-decoration: none
-               padding: 10px 15px 20px
+               padding: 15px 15px 20px
                border-radius: 5px
                &:hover
                     background: #3A3B3C
@@ -451,7 +548,7 @@ body
            color: white
            border-bottom-style: none
     
-
+    
     .slide1
         text-align: left
         p
@@ -470,7 +567,69 @@ body
             padding-bottom: 50px
    
     .carousel-item
-        left: 50px
+        
+        height: 650px
+        top: 100px
+    .banner-osf
+        img
+            align-self: center
+        .banner-text
+            top: 40%
+            left: 40%
+
+    .footer
+        a
+            text-decoration: none
+            color: black            
+        li
+            list-style: none
+            padding-top: 5px
+            
+           
+        .contactbox, .categories-content, .row-about
+            display: block 
+            ul
+                padding-top:30px
+             
+  
+        .Social
+            text-align: right 
+            a
+                padding: 0px 10px
+
+        .footer-links
+            width: 100vw
+            display: inline-flex
+            justify-content: space-around
+            flex-direction: row
+            padding-top: 30px
+            float: left
+            .categories
+                width: 40%
+                display: inline-flex
+                justify-content: flex-start
+                .categories-content
+                    display: inline-flex
+                    width: 100%
+                    .row-cat
+                      width: 40%
+            .About, .categories
+                header
+                    padding-left: 30px     
+                    padding-bottom: 30px     
+            header
+                padding-left: 0px
+            p
+                padding-top: 15px
+    
+
+               
+                            
+                
+                                    
+
+        
+           
 
 
 @media screen and ( min-width: 1280px )
@@ -539,31 +698,29 @@ body
                  text-align: left
 
     .container
-        top: 100px
-        right: 0px
-        left: 0px
-        margin: 0px
-        display: inline-flex
+      
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
     
     .box
         position: relative
         color: black
         left: 30px
-        width: 26%
+        top: 100px
 
 
         .palm 
             position: absolute
-            height: 70%
-            width: 100%
-            padding-left: 30px
-            background: #84bc22
-            background: rgba(30, 224, 33, 0.9)
+            height: 60%
+            width: 90%
+            background: #34c97b
+            background: rgba(52, 201, 123, 1)
             z-index: 1
-            border-radius: 15px
+            border-radius: 15px 15px 15px 15px
             img
                 position: absolute
-                height: 60%
+                height: 55%
                 z-index: -10
                 opacity: 0.1
                 bottom: 0px
@@ -574,23 +731,25 @@ body
                 position: absolute
                 color: white
                 text-align: center
+                justify-content: center
+                justify-self:  center
                 height: 100%
-                padding: 30px
-                top: 60px
-                left:60px
+                top: 20%
+                left: 30%
+                
 
                 h1
                     font-size: 60px
-                    padding-bottom: 50px
+                    padding-bottom: 60px
         .text
             position: absolute
             height: 30%
-            width: 100%
-            padding-left: 30px
-            bottom: 0px
+            width: 90%
+            bottom: 20px
             text-align: center
+            justify-content:  center
+            font-size: 15px
             h4
-                padding-top: 20px
                 font-size: 18px
             button
                 visibility: visible
@@ -604,7 +763,94 @@ body
                 span            
                     padding-left: 15px
                     font-size: 15px
+    .row-item
+      
+      display: inline-flex
+      padding-bottom: 25px
+      width: 100%
+      justify-content: space-evenly
+      .product_item
+             position: relative
+             background-color: white
+             color: black
+             width: 270px
+             a
+                 text-decoration: none
+                 text-align: center
+                 color: black
+             .overlay
+               position: absolute
+               top: 0px
+               background: #34c97b
+               opacity: 0
+               height: 100%
+               width: 100%
+               .btn-over-plus,.btn-over-heart
+                   position: absolute
+                   top: 35%
+                   width: 90px
+                   height: 90px
+                   background-color: white
+                   border-radius: 50%
+                   opacity: 1
+               .btn-over-heart
+                   left: 55%
+               .btn-over-plus
+                   left: 15%    
 
+    .product-button
+        background-color: white
+        color: green
+        padding: 3px 3px 3px 10px
+        border-radius: 15px 0px 0px 15px
+    .product-button-2
+            background-color: white
+            color: black
+            padding: 3px 5px 
+            border-left: 5px
+            border-radius: 0px 15px 15px 1px
+    
+
+    .product_item:hover .overlay
+        opacity: 0.9
+        cursor: pointer
+    
+    .product_8
+        position: static
+        
+        overflow: hidden
+        img
+            position: absolute
+            left: 0px
+    .gradient
+               position: static
+               top: 0px
+               background-image: linear-gradient(to top, #6d6092, #f573a2)
+               opacity: 0.8
+               height: 100%
+               width: 100%     
+               text-align: left
+               color: white
+               .gradient-text
+                   padding-top: 75%
+                   padding-left:  30px
+               .gradient-img
+                   img
+                     padding-left: 30px
+                   span
+                       padding-left: 70px
+
+    .separator 
+         color: white
+         span
+         margin-left: 30px
+         margin-right: 30px
+         font-size: 40px 
+        
+
+    
+    
+             
                 
                    
                 
