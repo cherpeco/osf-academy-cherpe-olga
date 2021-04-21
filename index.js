@@ -10,3 +10,4 @@ function addwhishlist(){
   document.getElementById('whish-item').innerHTML= whislist;
 
 }
+

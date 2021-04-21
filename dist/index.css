@@ -16,7 +16,7 @@ body {
   padding: 0px 55px;
   height: 70px;
   line-height: 40px;
-  margin: auto;
+  margin: none;
   display: inline-block;
   background-color: white;
   border-bottom: 3px solid #b5b7b9;
@@ -63,7 +63,17 @@ body {
 }
 .nav-links li a {
   text-decoration: none;
-  color: white;
+  text-decoration-color: white;
+}
+.nav-links li.div-list {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100vw;
+  display: inline-flex;
+  background-color: #242526;
+  justify-content: space-around;
 }
 
 .mobile-item, .mobile-item-md {
@@ -180,7 +190,7 @@ body {
 .osf {
   position: absolute;
   top: 10px;
-  left: 130px;
+  left: 200px;
   width: 73px;
   height: 25px;
   color: #011847;
@@ -197,7 +207,7 @@ body {
 .academy {
   position: absolute;
   top: 38px;
-  left: 130px;
+  left: 200px;
   width: 74px;
   height: 17px;
   color: #84bc22;
@@ -212,11 +222,11 @@ body {
 
 .carousel-inner {
   min-height: 500px !important;
-  max-width: 97vw;
   z-index: 2;
   border-radius: 10px;
   overflow: hidden;
-  right: 2px;
+  width: 96vw;
+  left: -10px;
 }
 
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
@@ -227,9 +237,6 @@ body {
   display: grid;
   width: 100vw;
   overflow: hidden;
-}
-.container .row {
-  padding-bottom: 60px;
 }
 
 .carousel-indicators li {
@@ -294,7 +301,7 @@ body {
 }
 
 .footer {
-  left: 0px;
+  position: static;
   top: 95%;
   width: 100vw;
   background-color: white;
@@ -331,11 +338,6 @@ body {
 }
 .footer .Social a {
   padding: 0px 5px;
-}
-
-.navbar {
-  display: flex !important;
-  justify-content: space-evenly !important;
 }
 
 #showContact:checked ~ .contactbox {
@@ -383,8 +385,8 @@ body {
 #car-item {
   position: relative;
   font-size: 14px;
-  top: -13px;
-  left: -11px;
+  top: -12px;
+  left: -8px;
   color: #84bc22;
   padding: 0px 3px 0px 3px;
   font-weight: 600;
@@ -396,8 +398,8 @@ body {
 #whish-item {
   position: relative;
   font-size: 14px;
-  top: -13px;
-  left: -7px;
+  top: -12px;
+  left: -3px;
   color: #84bc22;
   padding: 0px 3px 0px 3px;
   font-weight: 600;
@@ -406,7 +408,7 @@ body {
   z-index: 100;
 }
 
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 900px) {
   body {
     background-color: azure;
   }
@@ -421,8 +423,8 @@ body {
   }
 
   /* Logo = osf image and text */
-  .layer {
-    display: block;
+  .logo {
+    padding-left: 0%;
   }
 
   .layer-2 {
@@ -430,10 +432,6 @@ body {
     top: 0px;
     left: 55px;
     bottom: 15px;
-  }
-
-  .logo {
-    padding-left: 0%;
   }
 
   .mega-links {
@@ -479,12 +477,14 @@ body {
   nav .wrapper .nav-links {
     position: static;
     height: 100%;
-    width: 80%;
+    width: 90%;
+    line-height: 70px;
     background-color: white;
     max-width: 1000px;
     top: 0px;
     display: inline-flex;
     padding: 10px 0px 0px 10px;
+    margin-bottom: 0px;
   }
 
   .mega-box {
@@ -493,7 +493,7 @@ body {
     width: 100%;
     height: 350px;
     padding: 0px;
-    top: 75px;
+    top: 68px;
     opacity: 0;
     visibility: hidden;
   }
@@ -527,7 +527,7 @@ body {
     text-align: left;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 15px 20px;
+    padding: 13px 15px 8px;
     border-radius: 5px;
   }
   .nav-links li a:hover {
@@ -536,10 +536,25 @@ body {
     border-bottom: 5px solid #84bc22;
   }
   .nav-links li:hover .mega-box {
-    top: 72px;
+    top: 65px;
     opacity: 1;
     display: block;
     visibility: visible;
+  }
+  .nav-links li.div-list {
+    position: static;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+    background-color: white;
+    justify-content: space-evenly;
+    padding-left: 10px;
+  }
+  .nav-links li.div-list a:hover {
+    border-bottom-style: none;
+    color: black;
+    background-color: white;
+    opacity: 0.2;
   }
 
   .content .row header.sale {
@@ -630,6 +645,10 @@ body {
     padding-bottom: 50px;
   }
 
+  .carousel-inner {
+    width: 100%;
+  }
+
   .carousel-item {
     height: 650px;
     top: 100px;
@@ -693,14 +712,31 @@ body {
   .footer .footer-links p {
     padding-top: 15px;
   }
+
+  #car-item {
+    top: -35px;
+    left: 19px;
+  }
+
+  #whish-item {
+    top: -35px;
+    left: 19px;
+  }
 }
 @media screen and (min-width: 1280px) {
   body {
     background-color: white;
   }
 
-  .logo {
-    padding-left: 25%;
+  .layer {
+    display: block;
+  }
+
+  .layer-2 {
+    position: fixed;
+    top: 0px;
+    left: 130px;
+    bottom: 15px;
   }
 
   .show-md, .show-lg {
@@ -778,19 +814,25 @@ body {
   }
   .box .palm {
     position: absolute;
-    height: 60%;
+    height: 55%;
     width: 90%;
-    background: #34c97b;
-    background: #34c97b;
     z-index: 1;
     border-radius: 15px 15px 15px 15px;
   }
-  .box .palm img {
+  .box .palm .img-palm {
     position: absolute;
     height: 55%;
-    z-index: -10;
-    opacity: 0.1;
+    z-index: 1;
+    opacity: 1;
     bottom: 0px;
+    left: 0px;
+  }
+  .box .palm .img-back {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    opacity: 1;
+    top: 0px;
     left: 0px;
   }
   .box .palm .summersale {
@@ -799,22 +841,27 @@ body {
     text-align: center;
     justify-content: center;
     justify-self: center;
+    font-weight: bold;
+    font-size: 36px;
     height: 100%;
-    top: 20%;
-    left: 30%;
+    top: 15%;
+    left: 20%;
+    z-index: 2;
   }
   .box .palm .summersale h1 {
-    font-size: 60px;
-    padding-bottom: 60px;
+    font-size: 100px;
+    font-weight: 700;
+    padding-bottom: 30px;
   }
   .box .text {
     position: absolute;
-    height: 30%;
+    height: 35%;
     width: 90%;
     bottom: 20px;
     text-align: center;
     justify-content: center;
     font-size: 15px;
+    padding-bottom: 120pz;
   }
   .box .text h4 {
     font-size: 18px;
@@ -835,9 +882,13 @@ body {
     font-size: 15px;
   }
 
+  .product-tile {
+    margin-top: 60px;
+  }
+
   .row-item {
     display: inline-flex;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     width: 100%;
     justify-content: space-evenly;
   }
@@ -847,10 +898,15 @@ body {
     color: black;
     width: 270px;
   }
-  .row-item .product_item a {
+  .row-item .product_item .product_2 {
     text-decoration: none;
     text-align: center;
+    font-size: 15px;
     color: black;
+  }
+  .row-item .product_item .a_button {
+    font-size: 15px;
+    color: #34c97b !important;
   }
   .row-item .product_item .overlay {
     position: absolute;
@@ -878,8 +934,8 @@ body {
 
   .product-button {
     background-color: white;
-    color: green;
-    padding: 3px 3px 3px 10px;
+    color: green !important;
+    padding: 3px 3px 2px 10px;
     border-radius: 15px 0px 0px 15px;
   }
 

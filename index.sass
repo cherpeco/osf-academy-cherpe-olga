@@ -34,10 +34,11 @@ body
     padding: 0px 55px
     height: 70px
     line-height: 40px
-    margin: auto
+    margin: none
     display: inline-block
     background-color: white
     border-bottom: 3px solid $fontcolor
+    
     
 
 .logo
@@ -81,7 +82,18 @@ body
     li
         a 
           text-decoration: none
-          color: white
+           color: white
+    li.div-list
+        position: fixed
+        bottom: 0px
+        left: 0px
+        right: 0px
+        width: 100vw
+        display: inline-flex
+        background-color: #242526
+        justify-content: space-around 
+        
+
 
 .mobile-item, .mobile-item-md
     display: block
@@ -180,7 +192,7 @@ body
 .osf
     position: absolute
     top: 10px
-    left: 130px
+    left: 200px
     width: 73px
     height: 25px
     color: #011847
@@ -196,7 +208,7 @@ body
 .academy
     position: absolute
     top: 38px
-    left: 130px
+    left: 200px
     width: 74px
     height: 17px
     color: #84bc22
@@ -210,11 +222,11 @@ body
 
 .carousel-inner
   min-height: 500px !important
-  max-width: 97vw
   z-index: 2
   border-radius: 10px
   overflow: hidden
-  right: 2px
+  width: 96vw
+  left: -10px
 
 
 .carousel-control-prev, .carousel-control-next, .carousel-indicators
@@ -222,13 +234,8 @@ body
 
 .container
     display: grid
-    //top: 100px
     width: 100vw
-    //right: 5px
-    // opacity: 1
     overflow: hidden
-    .row
-        padding-bottom: 60px
 
     
 
@@ -289,8 +296,7 @@ body
 
 
 .footer
-    
-    left: 0px
+    position: static
     top: 95%
     width: 100vw
     background-color: white
@@ -325,9 +331,7 @@ body
         text-align: center 
         a
             padding: 0px 5px
-.navbar
-         display: flex !important
-         justify-content: space-evenly !important    
+  
     
           
 
@@ -364,8 +368,8 @@ body
 #car-item
     position: relative
     font-size: 14px
-    top: -13px
-    left: -11px
+    top: -12px
+    left: -8px
     color: #84bc22
     padding: 0px 3px 0px 3px
     font-weight: 600
@@ -375,8 +379,8 @@ body
 #whish-item
     position: relative
     font-size: 14px
-    top: -13px
-    left: -7px
+    top: -12px
+    left: -3px
     color: #84bc22
     padding: 0px 3px 0px 3px
     font-weight: 600
@@ -386,7 +390,7 @@ body
 
 //<---------------Media Queris------------------>
 
-@media screen and ( min-width: 830px)
+@media screen and ( min-width: 900px)
     body
        background-color: azure
    
@@ -398,15 +402,15 @@ body
         visibility: hidden
    
     /* Logo = osf image and text
-    .layer
-        display: block
+     
+    .logo
+        padding-left: 0%
     .layer-2
        position: fixed
        top: 0px
        left: 55px
-       bottom: 15px 
-    .logo
-        padding-left: 0%
+       bottom: 15px
+
 
     .mega-links 
       display: block
@@ -444,12 +448,16 @@ body
             .nav-links
               position: static
               height: 100%
-              width: 80%
+              width: 90%
+              line-height: 70px
               background-color: white
               max-width: 1000px
               top: 0px
               display: inline-flex
               padding: 10px 0px 0px 10px
+              margin-bottom: 0px
+             
+             
               
 
     .mega-box
@@ -458,7 +466,7 @@ body
         width: 100%
         height: 350px
         padding: 0px
-        top: 75px
+        top: 68px
         opacity: 0
         visibility: hidden   
         .content
@@ -472,8 +480,6 @@ body
                line-height: 25px
                
 
-
-       
     .nav-links
         top: 0px
         display: inline-flex
@@ -490,18 +496,35 @@ body
                text-align: left
                text-transform: uppercase
                text-decoration: none
-               padding: 15px 15px 20px
+               padding: 13px 15px 8px
                border-radius: 5px
                &:hover
                     background: #3A3B3C
                     color: #f2f2f2
-                    border-bottom: 5px solid #84bc22        
+                    border-bottom: 5px solid #84bc22
+                     
         li:hover
             .mega-box
-                top: 72px
+                top: 65px
                 opacity: 1
                 display: block
                 visibility: visible
+        li.div-list
+           position: static
+           top: 0px
+           right: 0px
+           width: 200px
+           background-color: white
+           justify-content: space-evenly
+           padding-left: 10px
+        li.div-list a:hover
+            border-bottom-style: none
+            color: black
+            background-color: white
+            opacity: 0.2
+
+        
+            
     
     
     .content .row
@@ -565,6 +588,8 @@ body
         p
             padding-top: 100px
             padding-bottom: 50px
+    .carousel-inner
+        width: 100%
    
     .carousel-item
         
@@ -621,6 +646,14 @@ body
                 padding-left: 0px
             p
                 padding-top: 15px
+    #car-item
+      top: -35px
+      left: 19px
+
+    #whish-item
+      top: -35px
+      left: 19px
+
     
 
                
@@ -636,13 +669,23 @@ body
     body
         background-color: white  
     
-    .logo 
-        padding-left: 25%
+    
+    .layer
+        display: block
+        
+    .layer-2
+       position: fixed
+       top: 0px
+       left: 130px
+       bottom: 15px
+
+    
     .show-md, .show-lg
         display: inline
         visibility: visible
 
     .nav-links
+        
         .drop-menu
             position: absolute
             background: white
@@ -659,7 +702,7 @@ body
                    visibility: visible
                    display: block
                    opacity: 0.8
-
+        
     .drop-menu li a
         display: block
         padding: 0 25px 0 0px
@@ -681,6 +724,10 @@ body
             color: black
             background-color: white
             opacity: 0.2
+        
+        
+        
+
        
         li:hover
            .mega-box
@@ -712,18 +759,24 @@ body
 
         .palm 
             position: absolute
-            height: 60%
+            height: 55%
             width: 90%
-            background: #34c97b
-            background: rgba(52, 201, 123, 1)
             z-index: 1
             border-radius: 15px 15px 15px 15px
-            img
+            
+            .img-palm
                 position: absolute
                 height: 55%
-                z-index: -10
-                opacity: 0.1
+                z-index: 1
+                opacity: 1
                 bottom: 0px
+                left: 0px
+            .img-back
+                position: absolute
+                height: 100%
+                z-index: -1
+                opacity: 1
+                top: 0px
                 left: 0px
                                
 
@@ -733,22 +786,27 @@ body
                 text-align: center
                 justify-content: center
                 justify-self:  center
+                font-weight: bold
+                font-size: 36px
                 height: 100%
-                top: 20%
-                left: 30%
+                top: 15%
+                left: 20%
+                z-index: 2
                 
 
                 h1
-                    font-size: 60px
-                    padding-bottom: 60px
+                    font-size: 100px
+                    font-weight: 700
+                    padding-bottom: 30px
         .text
             position: absolute
-            height: 30%
+            height: 35%
             width: 90%
             bottom: 20px
             text-align: center
             justify-content:  center
             font-size: 15px
+            padding-bottom: 120pz
             h4
                 font-size: 18px
             button
@@ -758,26 +816,36 @@ body
                 padding: 5px 25px 5px 25px
                 border-radius: 25px
                 border-color: blue
+                
             .fa-facebook-f
                 color: blue
                 span            
                     padding-left: 15px
                     font-size: 15px
+
+    .product-tile
+        margin-top: 60px
+
     .row-item
-      
       display: inline-flex
-      padding-bottom: 25px
+      padding-bottom: 30px
       width: 100%
       justify-content: space-evenly
+      
       .product_item
              position: relative
              background-color: white
              color: black
              width: 270px
-             a
+             .product_2
                  text-decoration: none
                  text-align: center
+                 font-size: 15px
                  color: black
+             .a_button
+                  font-size: 15px
+                  color: #34c97b !important
+                 
              .overlay
                position: absolute
                top: 0px
@@ -797,12 +865,11 @@ body
                    left: 55%
                .btn-over-plus
                    left: 15%    
-
     .product-button
-        background-color: white
-        color: green
-        padding: 3px 3px 3px 10px
-        border-radius: 15px 0px 0px 15px
+            background-color: white
+            color: green !important
+            padding: 3px 3px 2px 10px
+            border-radius: 15px 0px 0px 15px
     .product-button-2
             background-color: white
             color: black
