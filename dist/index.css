@@ -377,9 +377,6 @@ body {
   color: white;
   text-align: center;
 }
-.product-tile h1 {
-  padding: 40px 0px 40px;
-}
 
 #car-item {
   position: relative;
@@ -405,6 +402,146 @@ body {
   border: 2px solid #84bc22;
   border-radius: 50%;
   z-index: 100;
+}
+
+.product-tile {
+  margin-top: 60px;
+}
+
+.row-item {
+  display: inline-flex;
+  padding-bottom: 30px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.row-item .product_item {
+  position: relative;
+  background-color: white;
+  color: black;
+  width: 270px;
+}
+.row-item .product_item .product_2 {
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+}
+.row-item .product_item .a_button {
+  font-size: 15px;
+  color: #34c97b !important;
+}
+.row-item .product_item .overlay {
+  position: absolute;
+  top: 0px;
+  background: #34c97b;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+.row-item .product_item .overlay .btn-over-plus, .row-item .product_item .overlay .btn-over-heart {
+  position: absolute;
+  top: 35%;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 1;
+}
+.row-item .product_item .overlay .btn-over-heart {
+  left: 55%;
+}
+.row-item .product_item .overlay .btn-over-plus {
+  left: 15%;
+}
+
+.product-button {
+  background-color: white;
+  color: green !important;
+  padding: 3px 3px 2px 10px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.product-button-2 {
+  background-color: white;
+  color: black;
+  padding: 3px 5px;
+  border-left: 5px;
+  border-radius: 0px 15px 15px 1px;
+}
+
+.product_item:hover .overlay {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.product_8 {
+  position: static;
+  overflow: hidden;
+}
+.product_8 img {
+  position: absolute;
+  left: 0px;
+}
+
+.gradient {
+  position: static;
+  top: 0px;
+  background-image: linear-gradient(to top, #6d6092, #f573a2);
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+.gradient .gradient-text {
+  padding-top: 75%;
+  padding-left: 30px;
+}
+.gradient .gradient-img img {
+  padding-left: 30px;
+}
+.gradient .gradient-img span {
+  padding-left: 70px;
+}
+
+.button-ajax {
+  background-color: #1b2929;
+  color: white;
+}
+.button-ajax button {
+  color: white;
+  background-color: #1b2929;
+  padding: 5px 50px 5px 50px;
+  border-radius: 15px;
+  border-color: white;
+}
+.button-ajax button .fa-redo {
+  transform: rotate(230deg);
+  color: white;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.button-ajax button:hover .fa-redo {
+  color: black;
+}
+
+.product-name {
+  position: relative;
+  padding-top: 30px;
+  right: 5px;
+  padding-bottom: 50px;
+}
+.product-name .line-item {
+  z-index: -3;
+  padding-top: 10px;
+}
+.product-name h2 {
+  position: absolute;
+  z-index: 2;
+  padding: 10px 20px 5px 30px;
+  background-color: #1b2929;
+  left: 40%;
+  top: 0%;
 }
 
 @media screen and (min-width: 900px) {
@@ -902,132 +1039,5 @@ body {
   .box .text .fa-facebook-f span {
     padding-left: 15px;
     font-size: 15px;
-  }
-
-  .product-tile {
-    margin-top: 60px;
-  }
-
-  .row-item {
-    display: inline-flex;
-    padding-bottom: 30px;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-  .row-item .product_item {
-    position: relative;
-    background-color: white;
-    color: black;
-    width: 270px;
-  }
-  .row-item .product_item .product_2 {
-    text-decoration: none;
-    text-align: center;
-    font-size: 15px;
-    color: black;
-  }
-  .row-item .product_item .a_button {
-    font-size: 15px;
-    color: #34c97b !important;
-  }
-  .row-item .product_item .overlay {
-    position: absolute;
-    top: 0px;
-    background: #34c97b;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-  }
-  .row-item .product_item .overlay .btn-over-plus, .row-item .product_item .overlay .btn-over-heart {
-    position: absolute;
-    top: 35%;
-    width: 90px;
-    height: 90px;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 1;
-  }
-  .row-item .product_item .overlay .btn-over-heart {
-    left: 55%;
-  }
-  .row-item .product_item .overlay .btn-over-plus {
-    left: 15%;
-  }
-
-  .product-button {
-    background-color: white;
-    color: green !important;
-    padding: 3px 3px 2px 10px;
-    border-radius: 15px 0px 0px 15px;
-  }
-
-  .product-button-2 {
-    background-color: white;
-    color: black;
-    padding: 3px 5px;
-    border-left: 5px;
-    border-radius: 0px 15px 15px 1px;
-  }
-
-  .product_item:hover .overlay {
-    opacity: 0.9;
-    cursor: pointer;
-  }
-
-  .product_8 {
-    position: static;
-    overflow: hidden;
-  }
-  .product_8 img {
-    position: absolute;
-    left: 0px;
-  }
-
-  .gradient {
-    position: static;
-    top: 0px;
-    background-image: linear-gradient(to top, #6d6092, #f573a2);
-    opacity: 0.8;
-    height: 100%;
-    width: 100%;
-    text-align: left;
-    color: white;
-  }
-  .gradient .gradient-text {
-    padding-top: 75%;
-    padding-left: 30px;
-  }
-  .gradient .gradient-img img {
-    padding-left: 30px;
-  }
-  .gradient .gradient-img span {
-    padding-left: 70px;
-  }
-
-  .separator {
-    color: white;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 40px;
-  }
-  .button-ajax {
-    background-color: #1b2929;
-    color: white;
-  }
-  .button-ajax button {
-    color: white;
-    background-color: #1b2929;
-    padding: 5px 50px 5px 50px;
-    border-radius: 15px;
-    border-color: white;
-  }
-  .button-ajax button .fa-redo {
-    transform: rotate(230deg);
-    color: white;
-    padding-right: 20px;
-    padding-top: 10px;
-  }
-  .button-ajax button:hover .fa-redo {
-    color: black;
   }
 }
