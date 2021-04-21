@@ -1,12 +1,30 @@
-{
-    "sample":[
-     
-     
+
       {
-        "description":"Image2",
-        "image":"Images/popular_item2.png"
+        "product": [
+          {
+        
+        "src":"Images/popular-item4.png",
+        "name":"something here",
+        "price": "$ 145,76"
+      },
+      {
+        
+        "src":"Images/popular_item5.png",
+        "name":"something here",
+        "price": "984,4"
+      },
+      {
+        
+        "src":"Images/popular-item3.png",
+        "name":"something here",
+        "price": "655,76"
+      },
+      {
+        
+        "src":"Images/popular_item5.png",
+        "name":"something here",
+        "price": "$ 765,76"
       }
-      
-    ]
+        ]
+    }
   
-  }

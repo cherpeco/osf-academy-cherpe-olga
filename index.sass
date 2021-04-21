@@ -350,10 +350,10 @@ body
     color: white
     right: 0px
     img
-        max-width: 100vw
+        max-width: 100%
         display: block
         z-index: -2
-        padding: 5% 0px
+        
     .banner-text
         position: absolute
         top: 20%
@@ -655,7 +655,30 @@ body
       left: 19px
 
     
-
+    .product-tile 
+       h2 
+        overflow: hidden
+        text-align: center
+        padding: 30px 30px 30px 30px
+        
+        h2:before, h2:after 
+            background-color: #fff
+            content: ""
+            display: inline-block
+            height: 5px
+            position: relative
+            vertical-align: middle
+            width: 30%
+        
+        h2:before 
+            right: 1em
+            margin-left: -50%
+        
+        h2:after 
+            left: 1em
+            margin-right: -50%
+        
+    
                
                             
                 
