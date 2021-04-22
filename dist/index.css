@@ -220,13 +220,17 @@ body {
   text-align: left;
 }
 
+#carouselExampleCaptions {
+  width: 96vw;
+  top: 10px;
+  overflow: hidden;
+}
+
 .carousel-inner {
-  min-height: 500px !important;
+  min-height: 400px !important;
   z-index: 2;
   border-radius: 10px;
   overflow: hidden;
-  width: 96vw;
-  left: -10px;
 }
 
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
@@ -234,9 +238,11 @@ body {
 }
 
 .container {
-  display: grid;
-  width: 100vw;
-  overflow: hidden;
+  position: grid;
+  top: 100px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
 }
 
 .carousel-indicators li {
@@ -246,7 +252,12 @@ body {
   background-color: #b89e9e;
 }
 
+.carousel-item {
+  position: relative;
+}
+
 .slide1 {
+  position: absolute;
   top: 10px;
 }
 .slide1 p {
@@ -265,6 +276,7 @@ body {
 }
 
 .slide2 {
+  position: absolute;
   top: 10px;
 }
 .slide2 p {
@@ -283,6 +295,7 @@ body {
 }
 
 .slide3 {
+  position: absolute;
   top: 10px;
 }
 .slide3 p {
@@ -372,10 +385,11 @@ body {
   z-index: 1;
 }
 
-.product-tile {
+.product-tile-container {
   background-color: #1b2929;
   color: white;
   text-align: center;
+  margin-top: 50px;
 }
 
 #car-item {
@@ -757,6 +771,13 @@ body {
     border-bottom-style: none;
   }
 
+  #carouselExampleCaptions {
+    width: 900px;
+    height: 600px;
+    top: 10px;
+    overflow: hidden;
+  }
+
   .slide1 {
     text-align: left;
   }
@@ -782,12 +803,93 @@ body {
   }
 
   .carousel-inner {
-    width: 100%;
+    height: 150%;
   }
 
   .carousel-item {
-    height: 650px;
     top: 100px;
+  }
+  .carousel-item img {
+    width: 900px;
+    height: 600px;
+  }
+
+  .box {
+    position: relative;
+    color: black;
+    top: 120px;
+    right: -50px;
+    left: 0px;
+  }
+  .box .palm {
+    position: absolute;
+    height: 60%;
+    width: 250%;
+    z-index: 1;
+    border-radius: 15px 15px 15px 15px;
+  }
+  .box .palm .img-palm {
+    position: absolute;
+    height: 60%;
+    z-index: 1;
+    opacity: 1;
+    bottom: 0px;
+    left: 0px;
+  }
+  .box .palm .img-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+  }
+  .box .palm .summersale {
+    position: absolute;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    font-weight: bold;
+    font-size: 36px;
+    height: 100%;
+    top: 15%;
+    left: 20%;
+    z-index: 2;
+  }
+  .box .palm .summersale h1 {
+    font-size: 100px;
+    font-weight: 700;
+    padding-bottom: 30px;
+  }
+  .box .text {
+    position: absolute;
+    height: 35%;
+    width: 250%;
+    bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    padding-bottom: 120px;
+  }
+  .box .text h4 {
+    font-size: 18px;
+  }
+  .box .text button {
+    visibility: visible;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 25px 5px 25px;
+    border-radius: 25px;
+    border-color: blue;
+  }
+  .box .text .fa-facebook-f {
+    color: blue;
+  }
+  .box .text .fa-facebook-f span {
+    padding-left: 15px;
+    font-size: 15px;
   }
 
   .banner-osf img {
@@ -963,81 +1065,5 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-  }
-
-  .box {
-    position: relative;
-    color: black;
-    left: 30px;
-    top: 100px;
-  }
-  .box .palm {
-    position: absolute;
-    height: 55%;
-    width: 90%;
-    z-index: 1;
-    border-radius: 15px 15px 15px 15px;
-  }
-  .box .palm .img-palm {
-    position: absolute;
-    height: 55%;
-    z-index: 1;
-    opacity: 1;
-    bottom: 0px;
-    left: 0px;
-  }
-  .box .palm .img-back {
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    opacity: 1;
-    top: 0px;
-    left: 0px;
-  }
-  .box .palm .summersale {
-    position: absolute;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    justify-self: center;
-    font-weight: bold;
-    font-size: 36px;
-    height: 100%;
-    top: 15%;
-    left: 20%;
-    z-index: 2;
-  }
-  .box .palm .summersale h1 {
-    font-size: 100px;
-    font-weight: 700;
-    padding-bottom: 30px;
-  }
-  .box .text {
-    position: absolute;
-    height: 35%;
-    width: 90%;
-    bottom: 20px;
-    text-align: center;
-    justify-content: center;
-    font-size: 15px;
-    padding-bottom: 120pz;
-  }
-  .box .text h4 {
-    font-size: 18px;
-  }
-  .box .text button {
-    visibility: visible;
-    display: inline-block;
-    text-align: center;
-    padding: 5px 25px 5px 25px;
-    border-radius: 25px;
-    border-color: blue;
-  }
-  .box .text .fa-facebook-f {
-    color: blue;
-  }
-  .box .text .fa-facebook-f span {
-    padding-left: 15px;
-    font-size: 15px;
   }
 }
