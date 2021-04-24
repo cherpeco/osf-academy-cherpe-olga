@@ -322,6 +322,7 @@ body {
   overflow: hidden;
   padding-bottom: 30px;
   font-size: 15px;
+  margin-left: -60px;
 }
 .footer a {
   text-decoration: none;
@@ -372,6 +373,7 @@ body {
   text-align: center;
   color: white;
   right: 0px;
+  padding-bottom: 20px;
 }
 .banner-osf img {
   max-width: 100%;
@@ -422,9 +424,13 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 2px;
+  bottom: 10px;
   background-color: #bbb;
+  position: relative;
   border-radius: 50%;
   display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
   transition: background-color 0.6s ease;
 }
 
@@ -445,7 +451,7 @@ body {
   color: black;
   width: 270px;
   height: 370px;
-  margin: 20px 35px 20px 15px;
+  margin: 20px 30px 20px 30px;
   justify-self: self-start;
   border-radius: 15px;
 }
@@ -587,16 +593,18 @@ body {
   width: 40px;
   background-color: #1b2929;
   color: white;
+  border: unset;
 }
 
 .next {
   position: absolute;
   right: 0%;
   height: 200px;
-  width: 40px;
+  width: 35px;
   top: 25%;
   background-color: #1b2929;
   color: white;
+  border: unset;
 }
 
 #product {
@@ -604,6 +612,114 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-end;
+}
+
+.static-section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #45413e;
+  width: 100vw;
+}
+.static-section .firs-line, .static-section .second-line, .static-section .third-line {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  color: #787572;
+}
+.static-section .firs-line h2, .static-section .second-line h2, .static-section .third-line h2 {
+  color: #ffffff;
+}
+
+#form-input {
+  display: none;
+  position: relative;
+  top: 100px;
+  right: 300px;
+  height: 500px;
+  z-index: 3000;
+}
+#form-input input, #form-input label {
+  display: block;
+  visibility: visible;
+}
+#form-input button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  font-size: 22px;
+  /* fallback */
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3px 0 0 0;
+  padding: 10px;
+}
+#form-input button:hover {
+  background-color: #ccc;
+  color: black;
+}
+#form-input button#sign-in {
+  margin: 0;
+}
+#form-input button#sign-in:disabled {
+  background-color: #ccc;
+  color: black;
+  cursor: default;
+}
+#form-input button#toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 300;
+  padding: 0;
+  /* Display at the top right of the password section */
+  position: absolute;
+  top: -4px;
+  right: -2px;
+}
+#form-input div#password-constraints {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+}
+#form-input form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+#form-input h1 {
+  border-bottom: 1px solid #ccc;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  padding: 0 0 5px 0;
+}
+#form-input input {
+  border: 1px solid #ccc;
+  font-size: 22px;
+  /* fallback */
+  font-size: 16px;
+  padding: 15px;
+  width: 90%;
+  /* fallback */
+  width: calc(100% - 30px);
+  /* full width minus padding */
+}
+#form-input input[type=email]:not(:focus):invalid, #form-input input[type=password]:not(:focus):invalid {
+  color: red;
+  outline-color: red;
+}
+#form-input label {
+  display: block;
+  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 3px 0;
+}
+#form-input form section {
+  margin: 0 0 20px 0;
+  position: relative;
 }
 
 @media screen and (min-width: 900px) {
@@ -871,7 +987,7 @@ body {
     color: black;
     top: 120px;
     right: -50px;
-    left: 0px;
+    left: 30px;
   }
   .box .palm {
     position: absolute;
@@ -952,9 +1068,10 @@ body {
     left: 40%;
   }
 
-  .footer a {
-    text-decoration: none;
-    color: black;
+  .footer {
+    margin-left: -80px;
+    margin-left-text-decoration: none;
+    margin-left-color: black;
   }
   .footer li {
     list-style: none;
@@ -975,7 +1092,7 @@ body {
   .footer .footer-links {
     width: 100vw;
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: row;
     padding-top: 30px;
     float: left;
@@ -990,7 +1107,7 @@ body {
     width: 100%;
   }
   .footer .footer-links .categories .categories-content .row-cat {
-    width: 40%;
+    width: 30%;
   }
   .footer .footer-links .About header, .footer .footer-links .categories header {
     padding-left: 30px;
@@ -1039,6 +1156,7 @@ body {
   .product_item {
     display: flexbox;
     visibility: visible;
+    margin: 20px 30px 20px 10px !important;
   }
 
   .product-name {
@@ -1059,6 +1177,112 @@ body {
     background-color: #1b2929;
     left: 40%;
     top: 0%;
+  }
+
+  .row {
+    --bs-gutter-x: 0!important;
+  }
+
+  .static-section {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #45413e;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .static-section .firs-line, .static-section .second-line, .static-section .third-line {
+    display: flex;
+    flex-direction: row;
+    color: #787572;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .static-section .firs-line h2, .static-section .second-line h2, .static-section .third-line h2 {
+    color: #ffffff;
+  }
+  .static-section .firs-line {
+    order: 1;
+    flex: 0 0 auto;
+    padding-right: 0px;
+  }
+  .static-section .second-line {
+    flex-direction: row-reverse;
+    order: 2;
+  }
+  .static-section .third-line {
+    order: 3;
+  }
+
+  .prod-feat-row {
+    background-color: #1b2929;
+    padding-bottom: 30px;
+  }
+  .prod-feat-row h2 {
+    color: white;
+    text-align: center;
+  }
+  .prod-feat-row .prod-feat-item {
+    margin: 20px 20px 20px 20px;
+    background-color: white;
+    color: black;
+    justify-self: self-start;
+    border-radius: 15px;
+    text-align: center;
+    max-width: min-content;
+    min-height: 324px;
+  }
+  .prod-feat-row .prod-feat-item .price {
+    color: #9bc84b;
+  }
+  .prod-feat-row .prod-feat-item .prod-feat-4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .prod-feat-row .prod-feat-item p {
+    color: black;
+    padding-top: 10px;
+  }
+  .prod-feat-row .prod-feat-name {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .prod-feat-row .prod-feat-name p, .prod-feat-row .prod-feat-name h1 {
+    color: white;
+    text-align: center;
+  }
+  .prod-feat-row .prod-feat-name button {
+    position: absolute;
+    top: 80px;
+  }
+  .prod-feat-row .prod-feat-name .prev-line, .prod-feat-row .prod-feat-name .next-line {
+    position: absolute;
+    top: 10px;
+    max-width: 300px;
+  }
+
+  .line-control {
+    display: inline-flex;
+    align-items: center;
+    top: 50px;
+  }
+  .line-control .prev-prod-feat {
+    left: 21%;
+    max-width: min-content;
+  }
+  .line-control .next-prod-feat {
+    right: 21%;
+    max-width: fit-content;
+    flex-direction: row-reverse;
+  }
+  .line-control .next-prod-feat .next-line {
+    right: 100%;
+  }
+  .line-control h1 {
+    left: 49%;
+    position: absolute;
+    top: 70px;
   }
 }
 @media screen and (min-width: 1280px) {
