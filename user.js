@@ -1,90 +1,3 @@
-var cart_item = parseInt(localStorage.getItem('cart_item'));
-var whislist =  localStorage.getItem('whishlist');
-
-document.addEventListener('DOMContentLoaded', function() {
-  if(localStorage["cart_item"] === null)
-  {
-    cart_item = 0;
-    document.getElementById('car-item').innerHTML= cart_item;
-    localStorage.setItem('cart_item', JSON.stringify( cart_item));
-  
-  }
-  else{
-    document.getElementById('car-item').innerHTML= cart_item;
-  
-  }
-  if(localStorage["whishlist"] === null)
-  {
-    cart_item = 0;
-    document.getElementById('whish-item').innerHTML= whislist;
-    localStorage.setItem('whishlist', whislist)
-  
-  }
-  else{
-    document.getElementById('whish-item').innerHTML= whislist;
-  
-  }
-}, false);
-
-
-
-function addcart () {
-cart_item++;
-document.getElementById('car-item').innerHTML= cart_item;
-localStorage.setItem('cart_item', JSON.stringify( cart_item));
-
-}
-
-function addwhishlist(){
-  whislist++;
-  document.getElementById('whish-item').innerHTML= whislist;
-  localStorage.setItem('whishlist', whislist)
-}
-
-
-var slideIndex = 1;
-window.addEventListener("load",function() {
- 
-  showSlides(slideIndex);
- 
-})
-function plusSlides(n){
-
-  if (n < 0){
-    showSlides(slideIndex -= 1);
-  } else {
-   showSlides(slideIndex += 1); 
-  }
-}
-
-function showSlides(n){
-  var i;
-  var slides = document.getElementsByClassName("product_item");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    if (window.matchMedia("(max-width: 900px)").matches) {
-      slides[i].style.display = "none";
-    } else {
-      slides[slideIndex-1].style.display = "block";
-    }
-   
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
- 
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-function currentSlide(n){
-  showSlides(slideIndex = n);
-}
-
-
-
 var exampleModal = document.getElementById('form-input')
 exampleModal.addEventListener('show.bs.modal', function (event) {
   // Button that triggered the modal
@@ -152,3 +65,46 @@ if (form.checkValidity() === false) {
 }
 }
 
+
+var cart_item = parseInt(localStorage.getItem('cart_item'));
+var whislist =  localStorage.getItem('whishlist');
+
+document.addEventListener('DOMContentLoaded', function() {
+  if(localStorage["cart_item"] === null)
+  {
+    cart_item = 0;
+    document.getElementById('car-item').append(cart_item);
+    localStorage.setItem('cart_item', JSON.stringify( cart_item));
+  
+  }
+  else{
+    document.getElementById('car-item').append(cart_item);
+  
+  }
+  if(localStorage["whishlist"] === null)
+  {
+    cart_item = 0;
+    document.getElementById('whish-item').append(whislist);
+    localStorage.setItem('whishlist', whislist)
+  
+  }
+  else{
+    document.getElementById('whish-item').append(whislist);
+  
+  }
+}, false);
+
+
+
+function addcart () {
+cart_item++;
+document.getElementById('car-item').innerHTML= cart_item;
+localStorage.setItem('cart_item', JSON.stringify( cart_item));
+
+}
+
+function addwhishlist(){
+  whislist++;
+  document.getElementById('whish-item').innerHTML= whislist;
+  localStorage.setItem('whishlist', whislist)
+}

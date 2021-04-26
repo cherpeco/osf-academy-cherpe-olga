@@ -58,4 +58,25 @@ $('.prod-feat').slick({
     ]
   });
 
+  if (localStorage.getItem('cookieSeen') != 'shown') {
+    $('.cookie-banner').delay(10000).fadeIn();
+    localStorage.setItem('cookieSee','shown')
+  };
+  $('.accept').on('click', function() {
+    localStorage.setItem('cookieSeen','shown')
+    $('.cookie-banner').fadeOut();
+  });
+  $('.close').click(function() {
+    $('.cookie-banner').fadeOut();
+  });
+
+
+$(document).on('click', '#color', function(e){
+  $(this).toggleClass('active_dot');
 });
+
+
+
+});
+
+

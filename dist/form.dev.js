@@ -20,7 +20,7 @@ function togglePassword() {
   }
 }
 
-passwordInput.addEventListener('input', resetCustomValidity);
+passwordInput.addEventListener('input', resetCustomValidity());
 
 function resetCustomValidity() {
   passwordInput.setCustomValidity('');

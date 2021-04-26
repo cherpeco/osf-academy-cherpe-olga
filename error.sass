@@ -1,0 +1,144 @@
+
+
+body
+    background-color: #f1edea !important
+   
+  
+.container
+    position: relative
+    
+    display: flex
+    height: 650px
+    top: 100px
+   
+    ul.breadcrumb
+        position: absolute
+        left: 45%
+        padding: 20px 16px
+        list-style: none
+      
+        li
+          display: inline
+          font-size: 18px
+      
+          + li:before
+            padding: 8px
+            color: black
+            content: "/\00a0"
+      
+          a
+            color: #9cc74e
+            text-decoration: none
+      
+            &:hover
+              color: #9ce41f
+              text-decoration: underline   
+    .name-page
+        position: absolute
+        display: inline-flex
+        top: 70px
+        width: 100%
+        img
+            margin-top: 10px
+            width: 45%
+            height: 2px
+        h1
+            margin-top: -10px
+            padding: 0px 10px
+    .main
+        background-color: white !important
+        position: absolute
+        top: 120px
+        height: 450px
+        .ops
+            img
+               margin-left: -50px
+               margin-top: 50px
+            h1
+                position: absolute
+                top: 150px
+                left: 120px
+                color: #84bc22
+                font-size: 130px
+                font-family: "Lato - Extra Bold" 
+                font-weight: 900
+        .text
+            margin-top: 30px
+            
+            h2, h3
+                font-family: "Lato - Extra Bold"
+                font-size: 25px
+                font-weight: 900
+                padding-bottom: 20px
+            p
+                font-family: Lato
+                font-size: 18px
+                margin-right: 50px
+                display: flex
+                flex-wrap: wrap
+            a
+                text-decoration: none
+                color: #84bc22
+                font-size: 18px
+                font-family: Lato
+                margin-top: 30px
+            h3
+                position: absolute
+                margin-top: 50px
+            input
+                display: block
+                visibility: visible
+                padding: 6px
+                margin-top: 120px
+                font-size: 17px
+                border: 2px  solid  black
+                width: 80%
+                border-radius: 30px
+                bottom: 50px
+                outline: none
+            button
+                float: right
+                padding: 6px 10px
+                margin-top: -40px
+                margin-right: 150px
+                background: none
+                font-size: 17px
+                border: none
+                cursor: pointer
+
+
+@media screen and ( max-width:900px  )
+    body
+        overflow-x: hidden
+    .container
+        min-height: 1200px
+        top: 0px
+        .main
+            height: 1000px
+            margin-bottom: 30px
+            input, button
+                display: block
+                visibility: visible
+                margin-bottom: 30px
+            button
+                margin-top: -70px !important
+        .ops >h1
+            left: 30px !important
+            font-size: 100px !important
+    .footer
+        bottom: 10px
+
+
+
+
+    
+
+        
+                
+                
+
+
+                
+
+            
+        
