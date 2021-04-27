@@ -1,14 +1,22 @@
 
-
+footer
+    
+    flex-shrink: 0
+    bottom: 0px !important
+    left: 0px
+    right: 0px
+    
+   
+    
 .footer
-    position: static
     width: 100vw
     background-color: white !important
     text-align: left
     overflow: hidden
-    padding-bottom: 30px
+    padding-bottom: 50px
     font-size: 15px
-    padding-left: 30px
+    padding-left: 0px
+    bottom: 0px  !important
     a
         text-decoration: none
         color: black
@@ -47,24 +55,6 @@
 #showAbout:checked ~ .row-about
      display: block
 
-.banner-osf
-    position: relative
-    background-color: #1b2929
-    width: 100vw
-    text-align: center
-    color: white
-    right: 0px
-    padding-bottom: 20px
-    img
-        max-width: 100%
-        display: block
-        z-index: -2
-        
-    .banner-text
-        position: absolute
-        top: 20%
-        left: 10vw
-        z-index: 1
 
     
 //<---------------Media Queris------------------>
@@ -78,14 +68,17 @@
     .mobile-item, label, .show-sm, input, .btn
         display: none
         visibility: hidden
+    
+
     .footer
-        margin-top: 85px
+       
         text-decoration: none
         color: black            
         li
             list-style: none
             padding-top: 5px
-            
+            label
+                display: none
             
            
         .contactbox, .categories-content, .row-about
@@ -120,7 +113,6 @@
                 header
                     padding-left: 30px     
                     padding-bottom: 30px     
-            header
-                padding-left: 0px
+           
             p
                 padding-top: 15px

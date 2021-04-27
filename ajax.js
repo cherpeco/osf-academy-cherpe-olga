@@ -8,8 +8,8 @@ $(document).on('click', '#load-more', function(e){
             if (window.matchMedia("(max-width: 900px)").matches) {
               
                 var newdata = "";
-                       newdata += " <div class='col-12 col-md-3 product_item'  style='display:none' ><img src='"+ data.product[0].src + " '/> " +"<br>" + "<p>" + data.product[0].name + " <br>" + data.product[0].price + "</p> </div>" + 
-                       "<div class='col-12 col-md-3 product_item' style='display:none'><img src='"+ data.product[1].src + " '/> " +"<br>" + "<p>" + data.product[1].name + " <br>" + data.product[1].price + "</p> </div>"
+                       newdata += " <div class='col-12 col-md-3 product_item'  style='left: 0px'  ><img src='"+ data.product[0].src + " '/> " +"<br>" + "<p>" + data.product[0].name + " <br>" + data.product[0].price + "</p> </div>" + 
+                       "<div class='col-12 col-md-3 product_item' style='left:0px' ><img src='"+ data.product[1].src + " '/> " +"<br>" + "<p>" + data.product[1].name + " <br>" + data.product[1].price + "</p> </div>"
             } else{
                        var newdata = "";
                        newdata += "<div class='col-12 col-md-3 product_item'><img src='"+ data.product[0].src + " '/> " +"<br>" + "<p>" + data.product[0].name + " <br>" + data.product[0].price + "</p> </div>" + 

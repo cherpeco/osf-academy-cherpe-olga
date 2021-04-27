@@ -1,12 +1,19 @@
+footer {
+  flex-shrink: 0;
+  bottom: 0px !important;
+  left: 0px;
+  right: 0px;
+}
+
 .footer {
-  position: static;
   width: 100vw;
   background-color: white !important;
   text-align: left;
   overflow: hidden;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   font-size: 15px;
-  padding-left: 30px;
+  padding-left: 0px;
+  bottom: 0px !important;
 }
 .footer a {
   text-decoration: none;
@@ -50,27 +57,6 @@
   display: block;
 }
 
-.banner-osf {
-  position: relative;
-  background-color: #1b2929;
-  width: 100vw;
-  text-align: center;
-  color: white;
-  right: 0px;
-  padding-bottom: 20px;
-}
-.banner-osf img {
-  max-width: 100%;
-  display: block;
-  z-index: -2;
-}
-.banner-osf .banner-text {
-  position: absolute;
-  top: 20%;
-  left: 10vw;
-  z-index: 1;
-}
-
 @media screen and (min-width: 900px) {
   .hide-sm {
     display: block;
@@ -86,13 +72,15 @@
   }
 
   .footer {
-    margin-top: 85px;
     text-decoration: none;
     color: black;
   }
   .footer li {
     list-style: none;
     padding-top: 5px;
+  }
+  .footer li label {
+    display: none;
   }
   .footer .contactbox, .footer .categories-content, .footer .row-about {
     display: block;
@@ -129,9 +117,6 @@
   .footer .footer-links .About header, .footer .footer-links .categories header {
     padding-left: 30px;
     padding-bottom: 30px;
-  }
-  .footer .footer-links header {
-    padding-left: 0px;
   }
   .footer .footer-links p {
     padding-top: 15px;
