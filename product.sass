@@ -1,0 +1,151 @@
+
+.show-lg 
+  display: none
+  visibility: hidden
+  
+body
+  background-color: #f2edea  !important
+
+.container
+  position: relative
+  display: flex
+  flex-direction: column
+  flex: 1
+  height: 3000px
+  ul.breadcrumb
+      position: absolute
+      left: 10vw
+      right: 0px
+      padding: 30px 16px
+      list-style: none
+    
+      li
+        display: inline
+        font-size: 18px
+    
+        + li:before
+          padding: 8px
+          color: black
+          content: "/\00a0"
+    
+        a
+          color: #9cc74e
+          text-decoration: none
+    
+          &:hover
+            color: #9ce41f
+            text-decoration: underline   
+  .name-page
+      position: absolute
+      display: inline-flex
+      top: 100px
+      width: 80vw
+      
+      img
+          margin-top: 10px
+          width: 30vw
+          height: 2px
+      h1
+          margin-top: -10px
+          padding: 0px 0px 20px 40px
+.product
+    position: relative
+    top: 150px
+
+.product-gallery
+    display: inline-flex
+    flex-direction: column
+
+.product-image 
+  display: block
+
+
+.image-list 
+    display: flex
+    flex-direction: row
+    padding: 0px
+    
+    li 
+      margin: 0
+      list-style: none
+      padding: 10px 
+    img
+        height: 90px
+        width: 90px
+        opacity: 0.6
+
+.dot
+    position: absolute
+    height: 15px
+    width: 15px
+    margin: 0 2px
+    bottom: 10px
+    background-color: #bbb
+    position: relative
+    border-radius: 50%
+    display: inline-block
+    flex-direction: column
+    align-items: flex-start
+    transition: background-color 0.6s ease
+.dots
+    position: absolute
+    text-align: center
+    left: 35% !important
+.active-dot 
+    background-color: green
+.active-img 
+     border: 3px solid green
+     opacity: 1 !important
+.w3-content
+    position: absolute
+    top: 150px
+.w3-opacity-off
+    border: 2px solid green
+.but-cart
+    position: absolute
+    top: 700px
+    input
+        display: block
+        visibility: visible
+
+
+@media (min-width: 900px) 
+  .product-image img, .image-list img 
+    width: 100%
+  
+  .product-image 
+    display: block
+    img 
+      height: 52vh
+      &.active 
+        display: block
+        margin: 0 0 0.75rem 0
+      
+    
+  
+
+  .image-list 
+    display: flex
+    overflow: hidden
+    li 
+      margin: 0 0.75rem 0 0
+      flex-basis: 100%
+      &:nth-child(4) 
+        margin: 0
+      
+    
+    img 
+      height: auto
+      width: 100%
+      transition: opacity 0.3s ease
+      cursor: pointer
+      &:hover 
+        opacity: 0.7
+
+@keyframes fadeImg 
+  from 
+    opacity: 0
+
+  to 
+    opacity: 1
+  

@@ -66,11 +66,11 @@ if (form.checkValidity() === false) {
 }
 
 
-var cart_item = parseInt(localStorage.getItem('cart_item'));
+var cart_item =localStorage.getItem('cart_item');
 var whislist =  localStorage.getItem('whishlist');
 
 document.addEventListener('DOMContentLoaded', function() {
-  if(localStorage["cart_item"] === null)
+  if(localStorage["cart_item"]== null)
   {
     cart_item = 0;
     document.getElementById('car-item').append(cart_item);
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('car-item').append(cart_item);
   
   }
-  if(localStorage["whishlist"] === null)
+  if(localStorage["whishlist"]== null)
   {
-    cart_item = 0;
+    whislist = 0;
     document.getElementById('whish-item').append(whislist);
     localStorage.setItem('whishlist', whislist)
   
@@ -107,4 +107,33 @@ function addwhishlist(){
   whislist++;
   document.getElementById('whish-item').innerHTML= whislist;
   localStorage.setItem('whishlist', whislist)
+}
+
+const quantity = document.getElementById('quantity');
+
+function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : evt.keyCode;
+         var val = parseInt(quantity.value, 10);
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+         if(val<-1 || val> 100)
+            return false;
+          
+
+         return true;
+      }
+  
+function addCartProd(){
+cart_item +=parseInt(quantity.value, 10);
+document.getElementById('car-item').innerHTML= cart_item;
+localStorage.setItem('cart_item',  cart_item);
+
+}
+
+function increment() {
+  document.getElementById('quantity').stepUp();
+}
+function decrement() {
+  document.getElementById('quantity').stepDown();
 }

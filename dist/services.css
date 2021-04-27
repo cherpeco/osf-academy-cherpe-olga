@@ -1,10 +1,4 @@
 @charset "UTF-8";
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .show-lg {
   display: none;
   visibility: hidden;
@@ -12,9 +6,6 @@
 
 body {
   background-color: #f2edea !important;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 .container {
@@ -22,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 3000px;
+  height: 2300px;
 }
 .container ul.breadcrumb {
   position: absolute;
@@ -88,6 +79,7 @@ body {
   width: 170px;
   outline: none;
   cursor: pointer;
+  padding-left: 15px;
 }
 .container form .column .color-span {
   padding-top: 0px;
@@ -195,6 +187,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-end;
+}
+
+.result-appear {
+  position: relative;
+  left: 10%;
+  font-size: 20px;
+  top: 500px;
+  font-family: Lato;
+  color: #45413e;
+  margin: 50px 20px 50px 20px;
 }
 
 @media screen and (min-width: 900px) {
@@ -341,5 +343,15 @@ body {
   .show-lg {
     display: block;
     visibility: visible;
+  }
+
+  .result-appear {
+    position: relative;
+    left: 40%;
+    font-size: 20px;
+    top: 300px;
+    font-family: Lato;
+    color: #45413e;
+    margin: 50px 20px 30px 20px;
   }
 }

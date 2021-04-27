@@ -1,6 +1,6 @@
 "use strict";
 
-var cart_item = parseInt(localStorage.getItem('cart_item'));
+var cart_item = localStorage.getItem('cart_item');
 var whislist = localStorage.getItem('whishlist');
 document.addEventListener('DOMContentLoaded', function () {
   if (localStorage["cart_item"] === null) {
