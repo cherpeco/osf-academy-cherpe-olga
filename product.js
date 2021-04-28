@@ -79,7 +79,7 @@ function ReadMore() {
 
 
 let cart_item = localStorage.getItem('cart_item');
-var whishlist =  localStorage.getItem('whishlist');
+var whislist =  localStorage.getItem('whishlist');
 let quantity_input = document.getElementById('quantity').valueAsNumber;
 document.addEventListener('DOMContentLoaded', function() {
   if(localStorage["cart_item"] == null)
@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   if(localStorage["whishlist"] == null)
   {
-    whishlist = 0;
-    document.getElementById('whish-item').innerHTML= whishlist;
-    localStorage.setItem('whishlist', whishlist)
+   whislist = 0;
+    document.getElementById('whish-item').innerHTML= whislist;
+    localStorage.setItem('whishlist', whislist)
   
   }
   else{
-    document.getElementById('whish-item').innerHTML= whishlist;
+    document.getElementById('whish-item').innerHTML= whislist;
   
   }
 }, false);
@@ -116,9 +116,9 @@ localStorage.setItem('cart_item', JSON.stringify( cart_item));
 
 
 function addwhishlist(){
-  whishlist++;
-  document.getElementById('whish-item').innerHTML= whishlist;
-  localStorage.setItem('whishlist', whishlist)
+  whislist++;
+  document.getElementById('whish-item').innerHTML= whislist;
+  localStorage.setItem('whishlist', whislist)
 }
 
 

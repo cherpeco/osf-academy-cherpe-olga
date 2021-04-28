@@ -62,10 +62,10 @@ if (form.checkValidity() === false) {
 
 
 var cart_item = localStorage.getItem('cart_item');
-var whishlist =  localStorage.getItem('whishlist');
+var whislist =  localStorage.getItem('whishlist');
 
 document.addEventListener('DOMContentLoaded', function() {
-  if(localStorage["cart_item"]== null)
+  if(localStorage["cart_item"] == null)
   {
     cart_item = 0;
     document.getElementById('car-item').append(cart_item);
@@ -76,15 +76,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('car-item').append(cart_item);
   
   }
-  if(localStorage["whishlist"]== null)
+  if(localStorage["whishlist"] == null)
   {
     whislist = 0;
-    document.getElementById('whish-item').append(whishlist);
-    localStorage.setItem('whishlist', whishlist)
+    document.getElementById('whish-item').innerHTML= whislist;
+    localStorage.setItem('whishlist', whislist)
   
   }
   else{
-    document.getElementById('whish-item').append(whishlist);
+    document.getElementById('whish-item').innerHTML= whislist;
   
   }
 }, false);
@@ -98,9 +98,9 @@ localStorage.setItem('cart_item', JSON.stringify( cart_item))
 }
 
 function addwhishlist(){
-  whishlist++;
-  document.getElementById('whish-item').innerHTML= whishlist;
-  localStorage.setItem('whishlist', JSON.stringify( whishlist))
+  whislist++;
+  document.getElementById('whish-item').innerHTML= whislist;
+  localStorage.setItem('whishlist', whislist)
 }
 
 const quantity = document.getElementById('quantity');
