@@ -66,6 +66,7 @@ body {
 }
 .slide1 button a {
   text-decoration: none;
+  color: white;
 }
 
 .slide2 {
@@ -88,6 +89,7 @@ body {
 }
 .slide2 button a {
   text-decoration: none;
+  color: white;
 }
 
 .slide3 {
@@ -110,6 +112,7 @@ body {
 }
 .slide3 button a {
   text-decoration: none;
+  color: white;
 }
 
 .banner-osf {

@@ -94,6 +94,7 @@ body
         height: 40px
         padding-left: 45px
         outline: none
+        
 .price-prod
    
     top: 650px
@@ -107,6 +108,7 @@ body
         padding-left: 15px
         height: 40px
         outline: none
+        -moz-appearance: none
         
 .inp-num
     display: flex
@@ -125,6 +127,8 @@ body
         right: 30px
         top: 0px
         font-size: 25px
+    input[type=number] 
+      -moz-appearance: textfield
 .addcart
    width: 160px
    height: 45px
@@ -541,3 +545,33 @@ body
   
     
 
+@media print
+    body 
+      margin: 0
+      color: #000
+      background-color: #fff
+      display: block
+  
+    header, footer,  nav, form, .second-row, .product-name, .popular-slick-slider, 
+    .static-section, .cookie-banner
+      display: none  !important
+
+    .first-row
+        display: inline-block
+        .slider-images
+            width: 80%
+            height: 100%
+            left: -300px !important
+        .slider-nav
+            display: block
+            width: 50% 
+            height: 70%
+            left: 90px
+            top: -350px
+        .information
+            position: absolute
+            left: 50%
+            p
+                width: 500px
+  
+    

@@ -94,4 +94,8 @@ $('.slider-nav').slick({
 
   });
 
+
+  $(document).on('click', '#print',function(){
+    print();
+});
 });

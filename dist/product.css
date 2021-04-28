@@ -119,6 +119,7 @@ body {
   padding-left: 15px;
   height: 40px;
   outline: none;
+  -moz-appearance: none;
 }
 
 .inp-num {
@@ -140,6 +141,9 @@ body {
   right: 30px;
   top: 0px;
   font-size: 25px;
+}
+.inp-num input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .addcart {
@@ -601,5 +605,41 @@ body {
     top: 40px;
     border-radius: 25px;
     border: none;
+  }
+}
+@media print {
+  body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+    display: block;
+  }
+
+  header, footer, nav, form, .second-row, .product-name, .popular-slick-slider,
+.static-section, .cookie-banner {
+    display: none !important;
+  }
+
+  .first-row {
+    display: inline-block;
+  }
+  .first-row .slider-images {
+    width: 80%;
+    height: 100%;
+    left: -300px !important;
+  }
+  .first-row .slider-nav {
+    display: block;
+    width: 50%;
+    height: 70%;
+    left: 90px;
+    top: -350px;
+  }
+  .first-row .information {
+    position: absolute;
+    left: 50%;
+  }
+  .first-row .information p {
+    width: 500px;
   }
 }

@@ -240,8 +240,9 @@
 }
 
 #form-input {
-  top: 120px;
-  border-radius: 60px;
+  position: absolute;
+  padding-top: 130px;
+  border-radius: 0px !important;
 }
 #form-input .modal-header {
   border-bottom-style: none;
@@ -302,7 +303,7 @@
 }
 #form-input form {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 200px;
 }
 #form-input h1 {
   border-bottom: 1px solid #ccc;
@@ -326,16 +327,16 @@
 #form-input label {
   display: inline;
   font-family: Lato;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   margin: 0 0 3px 0;
   line-height: 30px;
 }
 #form-input span {
-  margin-left: 50%;
+  margin-left: 30% !important;
   color: #84bc22;
   font-family: Lato;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 400;
 }
 #form-input span .fa-eye {
@@ -344,6 +345,77 @@
 #form-input form section {
   margin: 0 0 20px 0;
   position: relative;
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 80px;
+  left: 5%;
+  right: 5%;
+  width: 85%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  height: 400px;
+}
+.cookie-banner h4 {
+  color: #84bc22;
+  font-family: Lato- Extra Bold;
+  font-size: 18px;
+  font-weight: 400;
+}
+.cookie-banner p {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+.cookie-banner p a {
+  text-decoration: none;
+  color: #84bc22;
+  font-size: 14px;
+}
+
+.cookies-text {
+  width: 80%;
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close {
+  position: absolute;
+  font-size: 30px;
+  font-weight: 100px;
+  background-color: white;
+  border: none;
+  color: black;
+  border-radius: 0px;
+  cursor: pointer;
+  top: -190px;
+  right: 10px;
+}
+
+.accept {
+  position: absolute;
+  background-color: #84bc22;
+  color: white;
+  padding: 5px 35px 5px 35px;
+  right: 10px;
+  top: 140px;
+  border-radius: 25px;
+  border: none;
 }
 
 @media screen and (min-width: 900px) {
@@ -567,6 +639,47 @@
   #whish-item {
     top: -35px;
     left: 19px;
+  }
+
+  .cookie-banner {
+    position: fixed;
+    bottom: 30px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 180px;
+  }
+
+  .close {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 100px;
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 0px;
+    cursor: pointer;
+    top: -70px;
+    right: 10px;
+  }
+
+  .accept {
+    position: absolute;
+    background-color: #84bc22;
+    color: white;
+    padding: 5px 35px 5px 35px;
+    right: 50px;
+    top: 40px;
+    border-radius: 25px;
+    border: none;
   }
 }
 @media screen and (min-width: 1280px) {

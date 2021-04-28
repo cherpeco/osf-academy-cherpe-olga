@@ -75,4 +75,7 @@ $(document).ready(function () {
     itemSelector: 'a',
     navigateByKeyboard: true
   });
+  $(document).on('click', '#print', function () {
+    print();
+  });
 });
