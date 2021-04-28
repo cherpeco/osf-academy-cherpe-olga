@@ -22,7 +22,7 @@ $fontfamily: Lato
     box-sizing: border-box
     font-family: 'Lato', sans-serif        
 .wrapper
-    position: static
+    position: fixed
     width: 100vw
     padding: 0px 55px
     height: 70px
@@ -31,6 +31,7 @@ $fontfamily: Lato
     display: inline-block
     background-color: white !important
     border-bottom: 3px solid $fontcolor
+    z-index: 1000
     
     
 
@@ -96,10 +97,7 @@ $fontfamily: Lato
     padding-left: 10px
     font-size: medium
     text-transform: uppercase
-    label
-         top: 150px 
-         left: 100px
-         color: red
+    
 
 
 .show-lg, .show-md, input, .hide-sm
@@ -141,17 +139,19 @@ $fontfamily: Lato
         li
             list-style: none
             padding-left: 30px
+            font-size: 15px
             a
-                top: 5px
+                top: 0px
 
 #showMega:checked ~ .mega-box
      display: block
-     max-height: 20%
+    
+     
     
     
 #showProduct:checked ~ .row > .mega-links-product, #showSale:checked ~ .row > .mega-links-sale
     display: block
-
+   
 
 
 .mega-box
@@ -167,6 +167,8 @@ $fontfamily: Lato
        padding: 0px
        width: 100%
        display: block
+       height: auto
+       
        label
            color: white
            padding-left: 15px //product and sale 

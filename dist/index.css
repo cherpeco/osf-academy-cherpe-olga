@@ -12,7 +12,7 @@ body {
 
 #carouselExampleCaptions {
   width: 96vw;
-  top: 10px;
+  top: 80px;
   overflow: hidden;
 }
 
@@ -64,6 +64,9 @@ body {
   color: white;
   border-color: white;
 }
+.slide1 button a {
+  text-decoration: none;
+}
 
 .slide2 {
   position: absolute;
@@ -83,6 +86,9 @@ body {
   color: white;
   border-color: white;
 }
+.slide2 button a {
+  text-decoration: none;
+}
 
 .slide3 {
   position: absolute;
@@ -101,6 +107,9 @@ body {
   border-radius: 25px;
   color: white;
   border-color: white;
+}
+.slide3 button a {
+  text-decoration: none;
 }
 
 .banner-osf {
@@ -150,29 +159,42 @@ body {
   z-index: 100;
 }
 
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.slick-dots li {
+  margin: 0 0.25rem;
+}
+.slick-dots li > button {
+  display: block;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #8b8b8e !important;
+  text-indent: -9999px;
+}
+.slick-dots li.slick-active button {
+  background-color: white !important;
+  border: 2px solid black;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.popular-slick-slider {
+  padding-top: 20px;
+}
+
 .product-tile-container {
   background-color: #1b2929;
   color: white;
   text-align: center;
-  margin-top: 50px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  bottom: 10px;
-  background-color: #bbb;
-  position: relative;
-  border-radius: 50%;
-  display: inline-block;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
+  margin-top: 150px;
 }
 
 .product-tile {
@@ -183,10 +205,9 @@ body {
   flex-wrap: wrap;
 }
 .product-tile .product_item {
-  position: relative;
   background-color: white;
   color: black;
-  width: 270px;
+  width: 270px !important;
   height: 370px;
   margin: 20px 30px 20px 30px;
   justify-self: self-start;
@@ -202,28 +223,10 @@ body {
   font-size: 15px;
   color: #34c97b !important;
 }
-.product-tile .product_item .overlay {
-  position: absolute;
-  top: 0px;
-  background: #34c97b;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-}
-.product-tile .product_item .overlay .btn-over-plus, .product-tile .product_item .overlay .btn-over-heart {
-  position: absolute;
-  top: 35%;
-  width: 90px;
-  height: 90px;
-  background-color: white;
-  border-radius: 50%;
-  opacity: 1;
-}
-.product-tile .product_item .overlay .btn-over-heart {
-  left: 55%;
-}
-.product-tile .product_item .overlay .btn-over-plus {
-  left: 15%;
+.product-tile .product_item a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
 
 .product-button {
@@ -247,12 +250,13 @@ body {
 }
 
 .product_8 {
-  position: static;
+  position: relative;
   overflow: hidden;
 }
 .product_8 img {
   position: absolute;
-  left: 0px;
+  border-radius: 15px;
+  right: 0px;
 }
 
 .gradient {
@@ -280,6 +284,7 @@ body {
   background-color: #1b2929;
   color: white;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .button-ajax button {
   color: white;
@@ -296,6 +301,13 @@ body {
 }
 .button-ajax button:hover .fa-redo {
   color: black;
+}
+
+#product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
 }
 
 .product-name {
@@ -318,50 +330,16 @@ body {
   top: 0%;
 }
 
-.product-tile-container {
-  position: relative;
-}
-
-.previous {
-  position: absolute;
-  top: 25%;
-  left: 0%;
-  height: 200px;
-  width: 40px;
-  background-color: #1b2929;
-  color: white;
-  border: unset;
-}
-
-.next {
-  position: absolute;
-  right: 0%;
-  height: 200px;
-  width: 35px;
-  top: 25%;
-  background-color: #1b2929;
-  color: white;
-  border: unset;
-}
-
-#product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
 .static-section {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   background-color: #45413e;
-  width: 100vw;
 }
 .static-section .firs-line, .static-section .second-line, .static-section .third-line {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 50px;
   color: #787572;
 }
 .static-section .firs-line h2, .static-section .second-line h2, .static-section .third-line h2 {
@@ -369,8 +347,9 @@ body {
 }
 
 #form-input {
-  top: 120px;
-  border-radius: 60px;
+  position: absolute;
+  margin-top: 100px;
+  border-radius: 0px !important;
 }
 #form-input .modal-header {
   border-bottom-style: none;
@@ -431,7 +410,7 @@ body {
 }
 #form-input form {
   margin: 0 auto;
-  max-width: 500px;
+  max-width: 200px;
 }
 #form-input h1 {
   border-bottom: 1px solid #ccc;
@@ -477,10 +456,10 @@ body {
 
 .cookie-banner {
   position: fixed;
-  bottom: 50px;
-  left: 10%;
-  right: 10%;
-  width: 80%;
+  bottom: 80px;
+  left: 5%;
+  right: 5%;
+  width: 85%;
   padding: 5px 14px;
   display: flex;
   align-items: center;
@@ -489,7 +468,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  height: 150px;
+  height: 400px;
 }
 .cookie-banner h4 {
   color: #84bc22;
@@ -531,7 +510,7 @@ body {
   color: black;
   border-radius: 0px;
   cursor: pointer;
-  top: -70px;
+  top: -190px;
   right: 10px;
 }
 
@@ -540,8 +519,8 @@ body {
   background-color: #84bc22;
   color: white;
   padding: 5px 35px 5px 35px;
-  right: 50px;
-  top: 10px;
+  right: 10px;
+  top: 140px;
   border-radius: 25px;
   border: none;
 }
@@ -743,39 +722,6 @@ body {
     --bs-gutter-x: 0!important;
   }
 
-  .static-section {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    background-color: #45413e;
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-  .static-section .firs-line, .static-section .second-line, .static-section .third-line {
-    display: flex;
-    flex-direction: row;
-    color: #787572;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .static-section .firs-line h2, .static-section .second-line h2, .static-section .third-line h2 {
-    color: #ffffff;
-    font-size: 23px;
-  }
-  .static-section .firs-line {
-    order: 1;
-    flex: 0 0 auto;
-    padding-right: 0px;
-  }
-  .static-section .second-line {
-    flex-direction: row-reverse;
-    order: 2;
-  }
-  .static-section .third-line {
-    order: 3;
-  }
-
   .prod-feat-row {
     background-color: #1b2929;
     padding-bottom: 30px;
@@ -845,6 +791,80 @@ body {
     position: absolute;
     top: 70px;
   }
+
+  .cookie-banner {
+    position: fixed;
+    bottom: 30px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 180px;
+  }
+
+  .close {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 100px;
+    background-color: white;
+    border: none;
+    color: black;
+    border-radius: 0px;
+    cursor: pointer;
+    top: -70px;
+    right: 10px;
+  }
+
+  .accept {
+    position: absolute;
+    background-color: #84bc22;
+    color: white;
+    padding: 5px 35px 5px 35px;
+    right: 50px;
+    top: 40px;
+    border-radius: 25px;
+    border: none;
+  }
+
+  .static-section {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: #45413e;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .static-section .firs-line, .static-section .second-line, .static-section .third-line {
+    display: flex;
+    flex-direction: row;
+    color: #787572;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .static-section .firs-line h2, .static-section .second-line h2, .static-section .third-line h2 {
+    color: #ffffff;
+    font-size: 23px;
+  }
+  .static-section .firs-line {
+    order: 1;
+    flex: 0 0 auto;
+    padding-right: 0px;
+  }
+  .static-section .second-line {
+    flex-direction: row-reverse;
+    order: 2;
+  }
+  .static-section .third-line {
+    order: 3;
+  }
 }
 @media screen and (min-width: 1280px) {
   body {
@@ -855,5 +875,42 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+
+  .overlay {
+    position: relative;
+    background: #34c97b;
+    opacity: 0;
+    height: 370px;
+    width: 270px;
+    top: -365px;
+    border-radius: 15px;
+  }
+  .overlay .btn-over-plus, .overlay .btn-over-heart {
+    position: absolute;
+    top: 35%;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+  }
+  .overlay .btn-over-heart {
+    left: 55%;
+  }
+  .overlay .btn-over-plus {
+    left: 15%;
+  }
+
+  .product_item:hover .overlay {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  #product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
   }
 }

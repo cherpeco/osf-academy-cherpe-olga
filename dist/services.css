@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .show-lg {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 
@@ -9,22 +9,22 @@ body {
 }
 
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 2300px;
+  height: fit-content;
+  padding-top: 80px !important;
 }
 .container ul.breadcrumb {
-  position: absolute;
+  display: flex;
   left: 20vw;
   right: 0px;
-  padding: 20px 16px;
+  padding: 30px 30px;
   list-style: none;
 }
 .container ul.breadcrumb li {
   display: inline;
-  font-size: 18px;
+  font-size: 16px;
 }
 .container ul.breadcrumb li + li:before {
   padding: 8px;
@@ -40,9 +40,8 @@ body {
   text-decoration: underline;
 }
 .container .name-page {
-  position: absolute;
   display: inline-flex;
-  top: 70px;
+  top: 100px;
   width: 80vw;
 }
 .container .name-page img {
@@ -52,10 +51,10 @@ body {
 }
 .container .name-page h1 {
   margin-top: -10px;
-  padding: 0px 10px;
+  padding: 0px 0px 20px 0px;
+  margin-left: 30px;
 }
 .container form {
-  position: absolute;
   top: 150px;
   left: 30px;
   display: flex;
@@ -81,8 +80,10 @@ body {
   cursor: pointer;
   padding-left: 15px;
 }
-.container form .column .color-span {
-  padding-top: 0px;
+.container form .column .color {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
 }
 
 .dots {
@@ -107,7 +108,7 @@ body {
 
 .product-tile-container {
   position: relative;
-  top: 500px;
+  top: 0px;
   background-color: none;
   color: white;
   text-align: center;
@@ -128,6 +129,14 @@ body {
   justify-self: self-start;
   border-radius: 15px;
   left: 10%;
+}
+.product_item a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+.product_item a:hover {
+  color: black;
 }
 .product_item .product_2 {
   text-decoration: none;
@@ -159,11 +168,15 @@ body {
   background-color: #1b2929;
   padding: 30px 20px 40px 20px;
 }
+.no_image a {
+  padding-top: 20px;
+}
 
 .button-ajax {
   background-color: none;
   color: white;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .button-ajax button {
   color: white;
@@ -190,37 +203,33 @@ body {
 }
 
 .result-appear {
-  position: relative;
-  left: 10%;
+  padding-left: 60px !important;
   font-size: 20px;
-  top: 500px;
+  padding-top: 50px !important;
   font-family: Lato;
   color: #45413e;
-  margin: 50px 20px 50px 20px;
 }
 
 @media screen and (min-width: 900px) {
   .container {
-    height: max-content;
-    top: 80px;
+    height: fit-content;
   }
   .container ul.breadcrumb {
-    position: absolute;
-    left: 35vw;
+    padding-left: 35vw;
   }
   .container .name-page {
-    left: 7%;
+    top: 100px !important;
+    padding-left: 10% !important;
   }
   .container form {
     background-color: white;
-    top: 150px;
+    top: 200px;
     left: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 20px;
-    width: 80vw;
   }
   .container form .column {
     padding: 20px 75px 5px 30px;
@@ -246,7 +255,7 @@ body {
   .product-tile-container {
     flex-direction: row;
     flex-wrap: wrap;
-    top: 300px;
+    top: px;
     margin-bottom: 30px;
   }
 
@@ -255,15 +264,33 @@ body {
     left: 0px;
   }
 
+  footer {
+    position: relative;
+    bottom: 0px !important;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    flex-shrink: 0;
+  }
+
+  .result-appear {
+    padding-left: 40vw !important;
+    font-size: 25px;
+    top: 120px;
+    font-family: Lato;
+    color: #45413e;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show-lg {
+    display: flex !important;
+    visibility: visible;
+  }
+
   .prod-feat-row {
+    margin-top: 10px !important;
     background-color: #1b2929;
     padding-bottom: 30px;
-    position: relative;
-    top: 350px;
     padding-top: 30px;
-  }
-  .prod-feat-row a {
-    text-decoration: none;
   }
   .prod-feat-row h2 {
     color: white;
@@ -286,9 +313,10 @@ body {
     padding-top: 20px;
     padding-bottom: 10px;
   }
-  .prod-feat-row .prod-feat-item p {
+  .prod-feat-row .prod-feat-item a {
     color: black;
     padding-top: 10px;
+    text-decoration: none;
   }
   .prod-feat-row .prod-feat-name {
     position: relative;
@@ -329,29 +357,5 @@ body {
     left: 49%;
     position: absolute;
     top: 70px;
-  }
-
-  footer {
-    position: relative;
-    bottom: 0px !important;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    flex-shrink: 0;
-    top: 450px;
-  }
-
-  .show-lg {
-    display: block;
-    visibility: visible;
-  }
-
-  .result-appear {
-    position: relative;
-    left: 40%;
-    font-size: 20px;
-    top: 300px;
-    font-family: Lato;
-    color: #45413e;
-    margin: 50px 20px 30px 20px;
   }
 }
